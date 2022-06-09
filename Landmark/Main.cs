@@ -63,9 +63,7 @@ namespace Landmark
         void landmarkCommand(CommandArgs args)
         {
             var player = args.Player;
-            var UUID = player.UUID;
-            // TODO: NOT SERVER
-            if (player == null)
+            if (player == null && player.RealPlayer)
             {
                 return;
             }
@@ -213,8 +211,7 @@ namespace Landmark
         void backCommand(CommandArgs args)
         {
             var player = args.Player;
-            // TODO: NOT SERVER
-            if (player == null)
+            if (player == null && player.RealPlayer)
             {
                 return;
             }
